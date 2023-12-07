@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -7,13 +8,14 @@ module.exports = {
     }, 
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Message from HTML-plugin',
             template: path.resolve(__dirname, './src/template.html'),
             filename: 'index.html'
-        })
+        }),
+        new CleanWebpackPlugin()
     ]
 }
