@@ -1,5 +1,13 @@
-const heading = document.createElement('h1')
-heading.textContent = 'Как интересно!'
+class Person {
+    constructor(PerName) {
+        this.PerName = PerName
+    }
+}
 
-const root = document.querySelector('#root')
-root.append(heading)
+let persons = []
+
+for(let i = 0; i < 10; i ++) {
+    persons.push(new Person(PerName =`${i}`))
+}
+
+console.log(persons)
