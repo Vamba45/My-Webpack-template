@@ -1,3 +1,5 @@
+import './styles/style.scss';
+
 class Person {
     constructor(PerName) {
         this.PerName = PerName
