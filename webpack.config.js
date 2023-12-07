@@ -44,6 +44,11 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
+            //Images
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
+                type: 'asset/resource',
+            },
         ]
     }
 }

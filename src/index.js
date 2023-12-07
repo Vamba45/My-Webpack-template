@@ -1,4 +1,6 @@
 import './styles/style.scss';
+import obs from './assets/img/obs.webp';
+import obs2 from './assets/img/Observer.jpg';
 
 class Person {
     constructor(PerName) {
@@ -6,14 +8,7 @@ class Person {
     }
 }
 
-let persons = []
+let images = document.querySelectorAll('img')
 
-for(let i = 0; i < 10; i ++) {
-    persons.push(new Person(PerName =`${i}`))
-}
-
-console.log(persons)
-
-alert('Here I am')
-
-console.log(2 + 5)
+images[0].src = obs
+images[1].src = obs2
