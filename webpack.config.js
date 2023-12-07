@@ -58,6 +58,11 @@ module.exports = {
                 test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
                 type: 'asset/resource',
             },
+            //Fonts 
+            {
+              test: /\.(woff2?|eot|ttf|otf)$/i,
+              type: 'asset/resource',
+            },
         ]
     }
 }
