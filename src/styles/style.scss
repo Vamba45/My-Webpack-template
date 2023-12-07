@@ -9,4 +9,10 @@ html {
     color: $font-color;
 
     background-color: #e6e6e6;
+
+    display: flex;
+}
+
+body {
+    display: grid;
 }

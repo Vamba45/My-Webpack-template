@@ -1,6 +1,5 @@
 import './styles/style.scss';
-import obs from './assets/img/obs.webp';
-import obs2 from './assets/img/Observer.jpg';
+import './assets/img/obs.webp'
 
 class Person {
     constructor(PerName) {

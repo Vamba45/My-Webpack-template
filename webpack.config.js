@@ -12,8 +12,8 @@ module.exports = {
     }, 
     devtool: 'inline-source-map',
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, './dist/'),
+        filename: 'assets/script/[name].js'
     },
     devServer: {
         static: {
@@ -40,7 +40,9 @@ module.exports = {
                 },
             ],
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: "assets/style/[name].css"
+        })
     ],
     module: {
         rules: [
@@ -48,7 +50,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                use: ['babel-loader'],
             },
             //CSS, PostCSS, Sass
             {
@@ -59,11 +61,17 @@ module.exports = {
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/img/[hash][ext][query]'
+                },
             },
             //Fonts 
             {
               test: /\.(woff2?|eot|ttf|otf)$/i,
               type: 'asset/resource',
+              generator: {
+                  filename: 'assets/fonts/[hash][ext][query]'
+              },
             },
         ]
     }
