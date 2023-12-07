@@ -11,3 +11,7 @@ for(let i = 0; i < 10; i ++) {
 }
 
 console.log(persons)
+
+alert('Here I am')
+
+console.log(2 + 5)
