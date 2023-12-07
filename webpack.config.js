@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
@@ -38,7 +39,8 @@ module.exports = {
                     to: path.resolve(__dirname, './dist/assets'), 
                 },
             ],
-        })
+        }),
+        new MiniCssExtractPlugin()
     ],
     module: {
         rules: [
@@ -51,7 +53,7 @@ module.exports = {
             //CSS, PostCSS, Sass
             {
                 test: /\.(scss|css)$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             //Images
             {
