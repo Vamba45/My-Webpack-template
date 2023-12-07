@@ -9,6 +9,3 @@ class Person {
 }
 
 let images = document.querySelectorAll('img')
-
-images[0].src = obs
-images[1].src = obs2
