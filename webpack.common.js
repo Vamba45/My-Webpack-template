@@ -6,23 +6,12 @@ const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: {
         main: path.resolve(__dirname, './src/index.js'),
-    }, 
-    devtool: 'inline-source-map',
+    },
     output: {
         path: path.resolve(__dirname, './dist/'),
         filename: 'assets/script/[name].js'
-    },
-    devServer: {
-        static: {
-            directory: path.join(__dirname, 'dist')
-        },
-        open: true,
-        compress: true,
-        hot: true,
-        port: 8080,
     },
     plugins: [
         new HtmlWebpackPlugin({

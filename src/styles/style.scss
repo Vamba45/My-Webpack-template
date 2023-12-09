@@ -3,10 +3,16 @@ $font-color: lch(53 105 40);
 
 @import './fonts.scss';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'WhisperRegular';
     font-size: $font-size;
-    color: $font-color;
+    color: pink;
 
     background-color: #e6e6e6;
 

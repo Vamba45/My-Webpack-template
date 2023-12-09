@@ -1,5 +1,5 @@
 import './styles/style.scss';
-import './assets/img/obs.webp'
+import './assets/img/obs.webp';
 
 class Person {
     constructor(PerName) {
@@ -8,3 +8,5 @@ class Person {
 }
 
 let images = document.querySelectorAll('img')
+
+console.log('Observatory')
