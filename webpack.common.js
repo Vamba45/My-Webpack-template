@@ -41,6 +41,12 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader'],
             },
+            //TS
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
             //CSS, PostCSS, Sass
             {
                 test: /\.(scss|css)$/,
@@ -51,7 +57,7 @@ module.exports = {
                 test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/img/[hash][ext][query]'
+                    filename: 'assets/img/[name][ext]'
                 },
             },
             //Fonts 
@@ -59,9 +65,13 @@ module.exports = {
               test: /\.(woff2?|eot|ttf|otf)$/i,
               type: 'asset/resource',
               generator: {
-                  filename: 'assets/fonts/[hash][ext][query]'
+                  filename: 'assets/fonts/[name][ext]'
               },
             },
         ]
-    }
+    },
+    
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
 }

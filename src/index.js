@@ -1,5 +1,7 @@
 import './styles/style.scss';
-import './assets/img/obs.webp';
+import obs from './assets/img/obs.webp';
+import font from './assets/fonts/Whisper-Regular.ttf';
+import './index.ts';
 
 class Person {
     constructor(PerName) {
@@ -9,4 +11,4 @@ class Person {
 
 let images = document.querySelectorAll('img')
 
-console.log('Observatory')
+document.body.append(`<img src=${obs}/>`)
