@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+
 import Heading from './components/Heading.jsx'; 
 import Footer from './components/Footer'; 
+import { BrowserRouter as Router, Route, Routes, Link }from 'react-router-dom';
 
 import './styles/style.scss';
 
@@ -11,9 +13,12 @@ const rootNode = document.getElementById("app");    // элемент для р�
 const root = ReactDOM.createRoot(rootNode);
 // рендеринг в корневой элемент
 root.render(
-    <>
-        <h1>Hello React</h1> 
-        <Heading/>
-        <Footer/>
-    </>
+    <Router>
+        <Routes>
+            <Route path='/' element={
+                <Heading/>
+            } />
+            <Route path='/footer' element={<Footer/>}/>
+        </Routes>
+    </Router>
 );
