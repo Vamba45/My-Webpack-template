@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Routes, Link }from 'react-router-dom';
 
 import './styles/style.scss';
 
-const rootNode = document.getElementById("app");    // элемент для рендеринга приложения React
+const rootNode: HTMLElement | any = document.getElementById("app");    // элемент для рендеринга приложения React
 // получаем корневой элемент 
 const root = ReactDOM.createRoot(rootNode);
 // рендеринг в корневой элемент
