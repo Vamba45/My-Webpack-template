@@ -21,14 +21,6 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new CopyPlugin({
-            patterns: [
-                { 
-                    from: path.resolve(__dirname, './src/assets'), 
-                    to: path.resolve(__dirname, './dist/assets'), 
-                },
-            ],
-        }),
         new MiniCssExtractPlugin({
             filename: "assets/style/[name].css"
         })
@@ -52,7 +44,7 @@ module.exports = {
             },
             //Images
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
+                test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/img/[name][ext]'
