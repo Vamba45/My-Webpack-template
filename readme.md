@@ -1,1 +1,1 @@
-Webpack 5 for simple development without frameworks such as React, Vue, etc
+Webpack 5 for simple develop on React, Redux Toolkit & Type-sciprt
